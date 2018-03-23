@@ -1,4 +1,4 @@
-//Assignment #: 9
+//Assignment #: 10
 
 //Student Name:  Blake Randall
 
@@ -8,6 +8,7 @@
 
 
 import javax.swing.*;
+import java.util.StringTokenizer;
 
 
 public class TestStudent {
@@ -21,7 +22,7 @@ public class TestStudent {
 		
 		
 		for(int i = 0; i < numStudents; i++) {
-			StringTokenizer st = new StringTokenizer(JOptionPane.showInputDialog(null, "Enter student data: "), ',');
+			StringTokenizer st = new StringTokenizer(JOptionPane.showInputDialog(null, "Enter student data: "), ",");
 			tempID = Integer.parseInt(st.nextToken());
 			tempName = st.nextToken();
 			int numScores = Integer.parseInt(st.nextToken());
@@ -55,7 +56,7 @@ public class TestStudent {
 	public static void displayResults(String[] s) {
 		String outAll = "";
 		for(int i = 0; i < s.length; i++) {
-			StringTokenizer st = new StringTokenizer(s[i], ',');
+			StringTokenizer st = new StringTokenizer(s[i], ",");
 			int j = st.countTokens();
 			for(int k = 0; k < j; k++)
 				outAll += st.nextToken() + "\n";
