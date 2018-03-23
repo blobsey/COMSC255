@@ -8,6 +8,7 @@
 
 import javax.swing.*;
 import java.io.*;
+import java.util.StringTokenizer;
 
 public class TestStudentExt{
 
@@ -27,7 +28,7 @@ public class TestStudentExt{
 		for(int i = 0; i < numStudents; i++)
 		{
 			in = br.readLine();
-			st = new StringTokenizer(in, ',');
+			st = new StringTokenizer(in, ",");
 			tempID = Integer.parseInt(st.nextToken());
 			tempName = st.nextToken();
 			int numScores = Integer.parseInt(st.nextToken());
@@ -62,7 +63,7 @@ public class TestStudentExt{
 		
 		outAll = "";
 		for(int i = 0; i < out.length; i++) {
-			st = new StringTokenizer(out[i], ',');
+			st = new StringTokenizer(out[i], ",");
 			int j = st.countTokens();
 			for(int k = 0; k < j; k++)
 				outAll += st.nextToken() + "\n";
