@@ -14,8 +14,12 @@ public class TestLeapDay {
 	{
 		int day = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter day: " ));
 		int month = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter month: " ));
+		int year = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter year: " ));
+
 		
-		Day currentDay = new Day(day, month);
-		JOptionPane.showMessageDialog(null, "Day number (non leap year): " + currentDay.findDayNum());
+		LeapDay currentDay = new LeapDay(day, month, year);
+		JOptionPane.showMessageDialog(null, "Day number for " + day + "/" + month + "/" + year + " is " + currentDay.findDayNum());
+		
+		
 	}
 }

@@ -11,7 +11,7 @@ public class TestCalculator {
 	public static void main(String[] args) {
 		Calculator calc = new Calculator();
 		
-		calc.setSize(400, 300);
+		calc.setSize(600, 400);
 		
 		calc.setVisible(true);
 	}
