@@ -6,6 +6,7 @@
 
 //Section: 8306
 import javax.swing.*;
+import java.util.StringTokenizer;
 
 	public class TestStudentExt {
 		public static void main(String[] args) {
@@ -18,7 +19,7 @@ import javax.swing.*;
 			
 			
 			for(int i = 0; i < numStudentExts; i++) {
-				StringTokenizer st = new StringTokenizer(JOptionPane.showInputDialog(null, "Enter student data: "), ',');
+				StringTokenizer st = new StringTokenizer(JOptionPane.showInputDialog(null, "Enter student data: "), ",");
 				tempID = Integer.parseInt(st.nextToken());
 				tempName = st.nextToken();
 				int numScores = Integer.parseInt(st.nextToken());
@@ -58,7 +59,7 @@ import javax.swing.*;
 		public static void displayResults(String[] s) {
 			String outAll = "";
 			for(int i = 0; i < s.length; i++) {
-				StringTokenizer st = new StringTokenizer(s[i], ',');
+				StringTokenizer st = new StringTokenizer(s[i], ",");
 				int j = st.countTokens();
 				for(int k = 0; k < j; k++)
 					outAll += st.nextToken() + "\n";
