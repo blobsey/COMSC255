@@ -7,17 +7,19 @@
 //Section: 8306
 
 import javax.swing.*;
-import java.awt.FlowLayout;
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TestJPanelExt implements ActionListener{
 	JFrame jfMain = new JFrame();
-	FlowLayout gl = new FlowLayout();
+	BorderLayout bl = new BorderLayout();
+	JPanel jpMain = new JPanel();
 	JPanelExt jpExtHp = new JPanelExt();
 	JPanel jpButtons = new JPanel();
 	JButton jbHappy = new JButton("Happy");
 	JButton jbSad = new JButton("Sad");
+	JButton jbPicture = new JButton("Picture");
 	
 	public static void main(String[] args)
 	{
@@ -27,21 +29,21 @@ public class TestJPanelExt implements ActionListener{
 	
 	public TestJPanelExt()
 	{
-		jbHappy.addActionListener(this);
-		jbSad.addActionListener(this);
-		
-		jfMain.setLayout(gl);
-		jpExtHp.setSize(400, 400);
-		jfMain.add(jpExtHp);
-		
-		jpButtons.setSize(100, 100);
-		jpButtons.add(jbHappy);
-		jpButtons.add(jbSad);
-		//jfMain.add(jpButtons);
-		
+		jfMain.setContentPane(jpMain);
 		jfMain.setSize(500, 500);
 		jfMain.setVisible(true);
-		jfMain.paint(null);
+		jpMain.setLayout(bl);
+		jpExtHp.setSize(100, 100);
+		
+		
+		jpMain.add(jpExtHp, BorderLayout.CENTER);
+		
+		jbHappy.addActionListener(this);
+		jbSad.addActionListener(this);
+		jpButtons.add(jbHappy);
+		jpButtons.add(jbSad);
+		jpMain.add(jpButtons, BorderLayout.SOUTH);
+		
 	}
 	
 
@@ -54,6 +56,11 @@ public class TestJPanelExt implements ActionListener{
 		else if(e.getSource() == jbSad)
 		{
 			jpExtHp.setPictureType("Sad");
+			jfMain.repaint();
+		}
+		else if(e.getSource() == jbPicture)
+		{
+			jpExtHp.setPictureType("Picture");
 			jfMain.repaint();
 		}
 	}
