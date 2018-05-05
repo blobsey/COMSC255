@@ -10,6 +10,9 @@
 package test;
 
 import javax.swing.*;
+
+import Statistics;
+
 import java.util.StringTokenizer;
 import java.text.DecimalFormat;
 

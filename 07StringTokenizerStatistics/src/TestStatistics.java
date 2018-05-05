@@ -7,13 +7,16 @@
 //Section: 8306
 
 
+import java.util.StringTokenizer;
+
 import javax.swing.*;
+
 
 public class TestStatistics {
 	public static void main(String[] args)
 	{
 		String input = JOptionPane.showInputDialog(null, "Enter Data <separated by commas>: ");
-		StringTokenizer st = new StringTokenizer(input, ',');
+		StringTokenizer st = new StringTokenizer(input, ",");
 		
 		int numValues = st.countTokens();
 		System.out.println(numValues);
