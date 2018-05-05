@@ -32,16 +32,16 @@ public class TestJPanelExt implements ActionListener{
 		jfMain.setContentPane(jpMain);
 		jfMain.setSize(500, 500);
 		jfMain.setVisible(true);
-		jpMain.setLayout(bl);
-		jpExtHp.setSize(100, 100);
-		
+		jpMain.setLayout(bl);		
 		
 		jpMain.add(jpExtHp, BorderLayout.CENTER);
 		
 		jbHappy.addActionListener(this);
 		jbSad.addActionListener(this);
+		jbPicture.addActionListener(this);
 		jpButtons.add(jbHappy);
 		jpButtons.add(jbSad);
+		jpButtons.add(jbPicture);
 		jpMain.add(jpButtons, BorderLayout.SOUTH);
 		
 	}
